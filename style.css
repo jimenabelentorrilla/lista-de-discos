@@ -1,0 +1,89 @@
+body {
+    background-color: hsl(225, 100%, 94%);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    margin: 20px;
+}
+
+.bloque-grande {
+    font-family: 'Red Hat Display', sans-serif;
+    width: 450px;
+    background-color: white;
+    border-radius: 26px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.cardFlex {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+h3 {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    font-size: 28px;
+    text-align: center;
+}
+
+.tachado {
+    text-decoration: underline;
+    color: red;
+}
+
+.borderImg {
+    border-radius: 26px 26px 0px 0px;
+}
+
+.icon {
+    width: 26px;
+}
+
+.hidden {
+    display: none;
+}
+
+.delete {
+    cursor: pointer;
+}
+
+.cardPeque {
+    display: none;
+}
+
+.input {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    padding: 10px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+}
+
+.cardPeque {
+    width: 350px;
+    height: 70px;
+    background-color: #F8F9FE;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sub {
+    text-decoration: line-through;
+    color: red;
+}
