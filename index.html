@@ -13,19 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="./style.css">
 
-    <title>Frontend Mentor | Order summary card</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
-        
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-    </style>
+    <title>Lista de discos</title>
 </head>
 
 <body>
@@ -35,19 +23,23 @@
             <div>
                 <h3>Discos pendientes</h3>
             </div>
-            <form name="form" id="forms" onsubmit="return validarfor();">
+            <form name="form" id="forms">
                 <div class="cardPeque">
-                    <div>
-                        <input id="valor" class="input" type="text" placeholder="Escribi acá tu disco" required>
+
+                    <div class="inputGroup">
+                        <input id="input" type="text" required="" autocomplete="off">
+                        <label for="name">Titulo</label>
                     </div>
+
                     <div>
-                        <input id="add" type="submit" value="Agregar">
+                        <button class="button" id="add">Agregar</button>
                     </div>
                 </div>
             </form>
 
+
             <div id="bloque">
-                <div id="cardPeque" class="cardPeque">
+                <!--- <div id="cardPeque" class="cardPeque">
                     <div>
                         <i class="fa-solid fa-music"></i>
                     </div>
@@ -57,17 +49,16 @@
                     <div>
                         <i id="tachito" class="delete fa-solid fa-trash"></i>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Jimena Belen</a>.
-    </div>
+
 
     <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/d7937845d5.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/d7937845d5.js" crossorigin="anonymous"></script>
+
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>

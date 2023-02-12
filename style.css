@@ -30,11 +30,6 @@ h3 {
     text-align: center;
 }
 
-.tachado {
-    text-decoration: underline;
-    color: red;
-}
-
 .borderImg {
     border-radius: 26px 26px 0px 0px;
 }
@@ -43,31 +38,56 @@ h3 {
     width: 26px;
 }
 
-.hidden {
-    display: none;
-}
-
 .delete {
     cursor: pointer;
 }
 
-.cardPeque {
-    display: none;
+
+/******input************/
+
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    max-width: 190px;
+    position: relative;
 }
 
-.input {
-    font-weight: 900;
-    color: hsl(223, 47%, 23%);
-    padding: 10px;
-    border: none;
-    border-radius: 16px;
-    font-size: 16px;
+.inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+}
+
+.inputGroup :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #ffffff;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(150, 150, 200);
 }
 
 .cardPeque {
     width: 350px;
     height: 70px;
-    background-color: #F8F9FE;
     border-radius: 16px;
     display: flex;
     flex-direction: row;
@@ -81,9 +101,23 @@ h3 {
     color: hsl(223, 47%, 23%);
     font-size: 16px;
     cursor: pointer;
+    margin-bottom: 0px;
 }
 
-.sub {
-    text-decoration: line-through;
-    color: red;
+.button {
+    border: none;
+    outline: none;
+    background-color: #6c5ce7;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #a29bfe;
+}
+
+.button:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #a29bfe;
 }

@@ -1,34 +1,33 @@
 let bloque = document.getElementById("bloque");
-let valor = document.getElementById("valor").value;
-let cardPeque = document.getElementById("cardPeque");
-let disco = document.getElementById("disco");
-let tachito = document.getElementById("tachito");
-let valoor = document.getElementById("valor");
+let cardPeque = document.querySelector("#cardPeque");
+let disco = document.querySelector("#disco");
+let tachito = document.querySelector("#tachito");
+let input = document.getElementById("input");
 let add = document.getElementById("add");
 
-function clickedAdd() {
-    let valor = document.getElementById("valor").value;
-    bloque.insertAdjacentHTML("beforeend", `
-    <div id="bloque">
-        <div id="cardPeque" class="cardPeque">
-            <div>
-                <i class="fa-solid fa-music"></i>
+
+function addF(e) {
+    let valor = input.value;
+    e.preventDefault();
+    let forms = document.getElementById("forms");
+    if (valor != "") {
+        bloque.insertAdjacentHTML("beforeend", `
+       
+            <div id="cardPeque" class="cardPeque">
+                <div>
+                    <i class="fa-solid fa-music"></i>
+                </div>
+                <div>
+                    <p id="disco" class="item">${valor}</p>
+               </div>
+                <div>
+                 <i id="tachito" class="delete fa-solid fa-trash"></i>
+               </div>
             </div>
-            <div>
-                <p id="banda" class="item">${valor}</p>
-           </div>
-            <div>
-             <i id="tachito" class="delete fa-solid fa-trash"></i>
-           </div>
-        </div>
-    </div>`);
+        `);
+    }
+    forms.reset();
 
 }
-add.addEventListener("click", clickedAdd);
 
-/////////////  Funcion para tachar //////////////////////////
-function tachar() {
-    disco.classList.add('sub');
-}
-disco.addEventListener("click", tachar);
-/////////////////////////////////
+add.addEventListener("click", addF);
